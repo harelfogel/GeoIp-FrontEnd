@@ -5,7 +5,7 @@ import Searcher from "./Searcher";
 function MyMapComponent() {
   const ref = useRef(null);
   const [map, setMap] = useState();
-  const [center, setCenter] = useState({ lat: 31.771959, lng: 35.217018 });
+  const [center, setCenter] = useState({ lat: -34.603722, lng: 	-58.381592 });
 
   /**
    * Because google.maps.Map requires an Element as a constructor parameter,
@@ -22,7 +22,7 @@ function MyMapComponent() {
   // Add marker
   useEffect(() => {
     if (map) {
-      map.setOptions({ center, zoom: 8 });
+      map.setOptions({ center, zoom: 5 });
     }
     
     new window.google.maps.Marker({
@@ -35,7 +35,7 @@ function MyMapComponent() {
     <>
       <Searcher setCenter={setCenter} />
       <div style={{ height: "20px" }} />
-      <div ref={ref} style={{ width: "80%", height: "50%",marginLeft:"14px" }} />
+      <div ref={ref} style={{ width: "80%", height: "50%",marginLeft:"28px" }} />
     </>
   );
 }

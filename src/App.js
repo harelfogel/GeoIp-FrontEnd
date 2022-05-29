@@ -31,7 +31,7 @@ const App = () => {
       >
         <ThemeProvider theme={theme}>
         <Box>
-          <Typography variant="h4" display="block" >
+          <Typography variant="h4" sx={{mt:2}} >
             Discover your public IP
           </Typography>
         </Box>

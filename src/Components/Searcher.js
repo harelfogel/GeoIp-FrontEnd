@@ -12,10 +12,8 @@ const Searcher = (props) => {
     const geocoder = new window.google.maps.Geocoder();
     const { setCenter } = props;
     const [ip, setIp] = useState("");
-    const [xApiKey, setxApiKey] = useState([]);
 
     const onSearch = async () => {
-        const api = `https://u5teosfa40.execute-api.eu-west-1.amazonaws.com/dev/position?ip=85.250.221.29`;
         const response = await axios.get(`https://7p7v0akdw6.execute-api.eu-west-1.amazonaws.com/dev?ip=${ip}`, {
             // method: 'GET', // *GET, POST, PUT, DELETE, etc.
             // mode: 'cors', // no-cors, *cors, same-origin
@@ -51,7 +49,7 @@ const Searcher = (props) => {
             <Box
                 component="form"
                 sx={{
-                    '& > :not(style)': { m: 1, width: '30ch',marginLeft:'68px' },
+                    '& > :not(style)': { m: 1, width: '30ch',marginLeft:'67px' },
                 }}
                 noValidate
                 autoComplete="off"
